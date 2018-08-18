@@ -1,0 +1,49 @@
+/** 
+ * @Author: YISHI 
+ * @Date: 2018-07-14 11:41:33 
+ * @Desc: 通用代码引用 
+ */
+
+@charset 'utf-8';
+
+// 居中 flex 方式
+@mixin flex_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// 不定宽高、定宽高居中
+@mixin center($width: null, $height: null) {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @if $width and $height {
+        width: $width;
+        height: $height;
+        margin-left: -($width / 2);
+        margin-top: -($height / 2);
+    }
+    @else if not $width and not $height {
+        transform: translate(-50%, -50%);
+    }
+    @else if not $height {
+        width: $width;
+        margin-left: -($width / 2);
+        transform: translate(0, -50%);
+    }
+    @else {
+        height: $height;
+        margin-top: -($height / 2);
+        transform: translate(-50%, 0);
+    }
+}
+
+@mixin border($direction: null, $width: 1px, $style: solid, $color: #333) {
+    @if not $direction {
+        border-#{$direction}: #{$width} #{$style} #{$color};
+    }
+    @else {
+        border: #{$width} #{$style} #{$color};
+    }
+}

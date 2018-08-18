@@ -1,0 +1,7 @@
+@charset 'utf-8';
+@import './mixin';
+
+.lz-center {
+    @include flex_center;
+    height: 100vh;
+}
