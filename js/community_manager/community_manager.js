@@ -32,6 +32,7 @@ layui.use(['element', 'table', 'layer', 'form', 'util'], function () {
             "person": "农业银行",
             "cash": "20000",
             "concat": "20000",
+            "address": "新沂市新安镇",
             "account_time": "12321312321312",
             "community_count": "2019-09-09"
         }]
@@ -42,9 +43,10 @@ layui.use(['element', 'table', 'layer', 'form', 'util'], function () {
         var data = obj.data;
         if (obj.event === 'detail') {
             layer.msg('ID：' + data.id + '详情操作');
+            window.location.href = "./community_detail.html";
         } else if (obj.event === 'edit') {
             layer.alert('编辑行：<br>' + JSON.stringify(data))
-            // window.location.href = "./member_edit.html";
+            window.location.href = "./member_edit.html";
         } else if (obj.event === 'freeze') {
             layer.msg('ID：' + data.id + '冻结');
         }
