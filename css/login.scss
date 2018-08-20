@@ -1,7 +1,34 @@
 @charset 'utf-8';
 @import './mixin';
+.lz_login {
+    &_form {
+        width: 375px;
+        padding: 60px 30px 60px 10px;
+        border-radius: 6px;
+        background-color: rgba(255, 255, 255, .8);
+        .layui-input-block {
+            margin-left: 60px;
+        }
+        .layui-form-label {
+            width: 30px;
+        }
+    }
+    @media (max-width: 750px) {
+        &_form {
+            width: 300px;
+        }
+    }
+}
 
-.lz-center {
+.lz_cont {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/bg_login.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.lz_center {
     @include flex_center;
     height: 100vh;
 }
