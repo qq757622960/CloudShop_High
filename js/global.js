@@ -25,7 +25,10 @@ layui.define(['element'], function(exports) {
 
 
     // 返回上一页
-    $('#back').on('click', function() { window.history.back(); })
+    $('#back').on('click', function() {
+        console.log(document.referrer);
+        window.location.href = document.referrer;
+    });
 
     // 格式化金钱, 请将需要格式化的元素自己改成 JS_money 类
     $('.JS_money').each(function (index, item) {

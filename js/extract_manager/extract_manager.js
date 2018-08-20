@@ -12,6 +12,13 @@ layui.use(['element', 'table', 'layer', 'form', 'util', 'laydate'], function () 
         util = layui.util,
         laydate = layui.laydate;
 
+    // 监听 TAB
+    element.on('tab(TAB)', function (data) {
+        var $tabItemsElem = $('.layui-tab-content .layui-tab-item');
+        $tabItemsElem.removeClass('layui-show');
+        $tabItemsElem.eq(data.index).addClass('layui-show');
+    });
+    
     // 提成统计 TB
     table.render({
         elem: '#TB_EXTRACT',
@@ -46,7 +53,7 @@ layui.use(['element', 'table', 'layer', 'form', 'util', 'laydate'], function () 
             // window.location.href = "./member_edit.html";
         }
     });
-
+ 
     // 渲染时间
     laydate.render({
         elem: '#START_TIME'
