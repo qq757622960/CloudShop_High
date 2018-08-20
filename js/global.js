@@ -26,7 +26,6 @@ layui.define(['element'], function(exports) {
 
     // 返回上一页
     $('#back').on('click', function() {
-        console.log(document.referrer);
         window.location.href = document.referrer;
     });
 
