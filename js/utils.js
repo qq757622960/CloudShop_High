@@ -1,7 +1,7 @@
 /** 
  * @Author: YISHI 
  * @Date: 2018-08-20 09:12:19 
- * @Desc: 工具方法 
+ * @Desc: 工具方法
  */
 
 const UTILS = {

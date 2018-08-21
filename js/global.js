@@ -23,10 +23,10 @@ layui.define(['element'], function(exports) {
         $('body').removeClass(GLOBAL.CLASS_NAME.SITE_MOBILE);
     });
 
-
     // 返回上一页
     $('#back').on('click', function() {
-        window.location.href = document.referrer;
+        window.history.back();
+        // window.location.href = document.referrer;
     });
 
     // 格式化金钱, 请将需要格式化的元素自己改成 JS_money 类

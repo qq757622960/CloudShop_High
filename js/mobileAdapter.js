@@ -5,4 +5,4 @@
  * 主要配置请参照 http://www.layui.com/doc/base/infrastructure.html 全局配置
  */
 
-layui.config({ base: '/js/' }).use('global');
+layui.config({ base: './js/' }).use('global');

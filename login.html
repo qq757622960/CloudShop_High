@@ -38,17 +38,6 @@
     </div>
     <script src="./layui/layui.js"></script>
     <script>
-
-        function map(callback) {
-            for (var i = 1; i <= 5; i++) {
-                callback && callback(i+1, i, [1,2,3,4]);
-            }
-        }
-
-        map(function(item, index, array) {
-            console.log(item, index, array);
-        });
-
         layui.use(['form', 'layer'], function () {
             var form = layui.form;
 
